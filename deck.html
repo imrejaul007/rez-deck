@@ -26,29 +26,47 @@
     </nav>
 
     <div class="slide-container" style="padding-top: 6rem;">
-        <!-- Slide 1: The Problem -->
+        <!-- Slide 1: The Problem - D2C Example -->
         <div class="slide fade-in" id="slide-1">
             <div class="slide-number">Slide 01 / 20</div>
             <h2>The Problem</h2>
             <div class="slide-content">
-                <blockquote style="font-size: 1.5rem; color: #ffffff;">India has 50+ million SMBs. 80% fail in 5 years.</blockquote>
-                <div class="problem-grid" style="margin-top: 2rem;">
+                <blockquote style="font-size: 1.3rem; color: #ffffff;">India has 50+ million SMBs. 80% fail in 5 years.</blockquote>
+
+                <!-- D2C Example -->
+                <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0;">
+                    <h4 style="color: #f87171; margin-bottom: 1rem;">👕 D2C Fashion Brand Example</h4>
+                    <div class="metrics-grid" style="margin: 1rem 0;">
+                        <div class="metric-card" style="background: rgba(0,0,0,0.2);">
+                            <div class="metric-value" style="font-size: 1.5rem; color: #ef4444;">₹500</div>
+                            <div class="metric-label">CAC (Meta Ads)</div>
+                        </div>
+                        <div class="metric-card" style="background: rgba(0,0,0,0.2);">
+                            <div class="metric-value" style="font-size: 1.5rem; color: #ef4444;">8%</div>
+                            <div class="metric-label">Repeat Rate</div>
+                        </div>
+                        <div class="metric-card" style="background: rgba(0,0,0,0.2);">
+                            <div class="metric-value" style="font-size: 1.5rem; color: #ef4444;">70%</div>
+                            <div class="metric-label">Ad Waste</div>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">They burn ₹50L/month on Meta/Google ads. Every customer is a stranger. No data, no repeat, no loyalty.</p>
+                </div>
+
+                <div class="problem-grid" style="margin-top: 1.5rem;">
                     <div class="problem-card" style="border-left: 4px solid #ef4444;">
-                        <h3 style="color: #f87171;">The Data Problem</h3>
-                        <p>Merchants spend lakhs on ads but have ZERO customer data. Google, Swiggy, Zomato own everything.</p>
+                        <h3 style="color: #f87171;">Burn Money on Ads</h3>
+                        <p>Pay ₹500+ per customer to Meta/Google. 70% wasted on wrong audience.</p>
                     </div>
                     <div class="problem-card" style="border-left: 4px solid #f59e0b;">
-                        <h3 style="color: #fbbf24;">The Margin Problem</h3>
-                        <p>20-30% to aggregators. Restaurant owners work for Zomato/Swiggy. Salons get 0 customers from Google.</p>
+                        <h3 style="color: #fbbf24;">Zero Customer Data</h3>
+                        <p>Customers disappear after purchase. No email, no phone, no history.</p>
                     </div>
                     <div class="problem-card" style="border-left: 4px solid #6366f1;">
-                        <h3 style="color: #818cf8;">The Attribution Problem</h3>
-                        <p>Which ad brought the customer? No idea. 70% of marketing spend is wasted.</p>
+                        <h3 style="color: #818cf8;">No Repeat Customers</h3>
+                        <p>One-time buyers. CAC never decreases. CAC > LTV. Unsustainable.</p>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 2rem; font-weight: 700; font-size: 1.2rem; color: var(--secondary);">
-                    50M merchants × ₹50K average = ₹2.5 Lakh Crore problem
-                </p>
             </div>
         </div>
 
@@ -89,44 +107,101 @@
             <div class="slide-number">Slide 04 / 20</div>
             <h2>What We're Building</h2>
             <div class="slide-content">
-                <blockquote style="font-size: 1.3rem;">"The behavioral graph of local commerce."</blockquote>
-                <pre>
-MERCHANT-OWNED DATA LAYER:
+                <blockquote style="font-size: 1.3rem; color: #ffffff;">"The behavioral graph of local commerce."</blockquote>
 
-QR SCAN → Customer Identity
-WALLET → Transaction History
-REWARDS → Habit Patterns
-     ↓
-CUSTOMER GRAPH
-     ↓
-AI PREDICTS</pre>
-                <p style="text-align: center; margin-top: 1rem; font-weight: 600; color: var(--primary-light);">Not an app. A behavioral intelligence layer.</p>
+                <!-- The Key Mechanism -->
+                <div style="background: rgba(16, 185, 129, 0.1); border: 2px solid var(--secondary); border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0; text-align: center;">
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem;">How It Works</h4>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
+                        <div style="background: rgba(99, 102, 241, 0.2); padding: 1rem 1.5rem; border-radius: 12px;">
+                            <div style="font-size: 1.5rem;">🏪</div>
+                            <div style="font-weight: 600;">Merchant</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">Pays 5%</div>
+                        </div>
+                        <div style="color: var(--primary-light); font-size: 1.5rem; display: flex; align-items: center;">→</div>
+                        <div style="background: rgba(99, 102, 241, 0.2); padding: 1rem 1.5rem; border-radius: 12px;">
+                            <div style="font-size: 1.5rem;">💰</div>
+                            <div style="font-weight: 600;">REZ</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">Gives 5% Cashback</div>
+                        </div>
+                        <div style="color: var(--primary-light); font-size: 1.5rem; display: flex; align-items: center;">→</div>
+                        <div style="background: rgba(99, 102, 241, 0.2); padding: 1rem 1.5rem; border-radius: 12px;">
+                            <div style="font-size: 1.5rem;">👤</div>
+                            <div style="font-weight: 600;">Customer</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">+ Social Reward</div>
+                        </div>
+                    </div>
+                    <p style="color: var(--secondary); font-weight: 600; margin-top: 1rem;">Merchant-funded. Zero burn. No VC subsidy.</p>
+                </div>
+
+                <pre style="margin-top: 1.5rem;">
+HOW REZ IS DIFFERENT:
+
+✓ Merchant pays 5% → Customer gets 5% cashback
+✓ Customer shares on WhatsApp → Gets extra BRAND COINS
+✓ Every transaction → AI learns behavior
+✓ Repeat customers → Merchant grows → REZ grows
+✓ No burning VC money. Self-sustaining loop.</pre>
             </div>
         </div>
 
         <!-- Slide 5: Two-Sided Network -->
         <div class="slide fade-in" id="slide-5">
             <div class="slide-number">Slide 05 / 20</div>
-            <h2>Two-Sided Network</h2>
+            <h2>Merchant-Funded Rewards Loop</h2>
             <div class="slide-content">
-                <div class="market-visual">
+                <blockquote style="font-size: 1.2rem; color: var(--secondary);">"The closed-loop economy. No VC money burned. Self-sustaining."</blockquote>
+
+                <div style="background: rgba(99, 102, 241, 0.1); border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem;">🏪</div>
+                            <div style="font-weight: 700;">Merchant</div>
+                            <div style="font-size: 0.9rem; color: var(--secondary);">Pays 5%</div>
+                        </div>
+                        <div style="font-size: 2rem; color: var(--primary-light);">→</div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem;">💎</div>
+                            <div style="font-weight: 700;">REZ Coins</div>
+                            <div style="font-size: 0.9rem; color: var(--primary-light);">5% Cashback</div>
+                        </div>
+                        <div style="font-size: 2rem; color: var(--primary-light);">→</div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem;">👤</div>
+                            <div style="font-weight: 700;">Customer</div>
+                            <div style="font-size: 0.9rem; color: var(--secondary);">Saves 5%+</div>
+                        </div>
+                        <div style="font-size: 2rem; color: var(--primary-light);">→</div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem;">📤</div>
+                            <div style="font-weight: 700;">Social Share</div>
+                            <div style="font-size: 0.9rem; color: #f59e0b;">+Extra Coins</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="market-visual" style="margin-top: 1rem;">
                     <div class="market-side merchant">
-                        <h3>MERCHANT SIDE</h3>
+                        <h3>MERCHANT BENEFITS</h3>
                         <div class="market-flow">
-                            <div class="market-node">QR Scan → Customer Identity</div>
-                            <div class="market-node">Wallet → Transaction History</div>
-                            <div class="market-node">AI → Behavior Prediction</div>
+                            <div class="market-node">Own Customer Data</div>
                             <div class="market-node">Repeat Customers</div>
+                            <div class="market-node">AI Predictions</div>
+                            <div class="market-node">Cheaper than Ads</div>
                         </div>
                     </div>
                     <div class="market-side consumer">
-                        <h3>CONSUMER SIDE</h3>
+                        <h3>CONSUMER BENEFITS</h3>
                         <div class="market-flow">
-                            <div class="market-node">Scan Anywhere</div>
-                            <div class="market-node">Earn Coins</div>
-                            <div class="market-node">Redeem Everywhere</div>
-                            <div class="market-node">Save More</div>
+                            <div class="market-node">Earn 5%+ Back</div>
+                            <div class="market-node">Redeem Anywhere</div>
+                            <div class="market-node">Social Rewards</div>
+                            <div class="market-node">Save Every Time</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
                     </div>
                 </div>
                 <p style="text-align: center; margin-top: 2rem; font-weight: 700; color: var(--secondary);">Network Effect: More merchants → More to earn → More consumers → More value → More merchants</p>
