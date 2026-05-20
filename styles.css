@@ -173,27 +173,23 @@ body {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, #94a3b8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
+    text-shadow: 0 2px 20px rgba(99, 102, 241, 0.3);
 }
 
 .hero-tagline {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-weight: 600;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-light);
     margin-bottom: 1.5rem;
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    color: #cbd5e1;
     max-width: 700px;
     margin: 0 auto 2rem;
+    line-height: 1.7;
 }
 
 .hero-stats {
@@ -209,17 +205,15 @@ body {
 }
 
 .hero-stat-value {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
     font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
+    text-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
 }
 
 .hero-stat-label {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin-top: 0.25rem;
 }
 
@@ -276,20 +270,22 @@ body {
 .doc-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
+    color: #ffffff;
     margin-bottom: 0.75rem;
 }
 
 .doc-card p {
-    color: var(--text-secondary);
+    color: #cbd5e1;
     font-size: 0.95rem;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .doc-card-meta {
     display: flex;
     gap: 1rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
 }
 
 .doc-card-arrow {
@@ -346,25 +342,27 @@ section {
 
 .section-label {
     display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--primary);
+    color: var(--primary-light);
     margin-bottom: 1rem;
 }
 
 .section-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.75rem, 5vw, 3rem);
     font-weight: 800;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
+    font-size: 1rem;
+    color: #cbd5e1;
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Problem Section */
@@ -403,12 +401,14 @@ section {
 .problem-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
+    color: #ffffff;
     margin-bottom: 0.75rem;
 }
 
 .problem-card p {
-    color: var(--text-secondary);
+    color: #cbd5e1;
     font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Quote Box */
@@ -1386,14 +1386,20 @@ footer {
     color: var(--text-secondary);
 }
 
-/* Animations */
+/* Animations - Made visible by default for better UX */
 .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
-.fade-in.visible {
+/* Subtle fade for scroll-triggered elements (optional enhancement) */
+.fade-in.animate {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in.animate.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1467,6 +1473,50 @@ footer {
     .doc-cards {
         grid-template-columns: 1fr;
     }
+
+    /* Mobile-specific text improvements */
+    .hero-description,
+    .problem-card p,
+    .doc-card p,
+    .section-subtitle,
+    .slide-content,
+    .timeline-content p,
+    .phase-content li,
+    .model-card li,
+    .market-node,
+    .why-now-card p,
+    .one-pager-item p {
+        color: #cbd5e1 !important;
+        line-height: 1.6;
+    }
+
+    .hero-stat-value,
+    .section-title,
+    .problem-card h3,
+    .doc-card h3,
+    .metric-value,
+    .timeline-content h4,
+    .phase-content h4,
+    .model-card h3,
+    .moat-card h3,
+    .market-side h3,
+    .why-now-card h4 {
+        color: #ffffff !important;
+    }
+
+    .market-tier-value,
+    .impact-change,
+    .fund-percent {
+        color: var(--primary-light) !important;
+    }
+
+    .market-tier-label,
+    .impact-label,
+    .fund-label,
+    .doc-card-meta,
+    .metric-label {
+        color: var(--text-secondary) !important;
+    }
 }
 
 /* ==========================================
@@ -1496,10 +1546,10 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0.6rem 0.25rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.65rem;
-    font-weight: 500;
+    font-size: 0.7rem;
+    font-weight: 600;
     gap: 0.3rem;
     border-radius: 12px;
     margin: 0 2px;
@@ -1510,11 +1560,12 @@ footer {
 
 .mobile-nav a:active {
     transform: scale(0.95);
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(99, 102, 241, 0.2);
 }
 
 .mobile-nav a.active {
-    color: var(--primary-light);
+    color: white;
+    background: rgba(99, 102, 241, 0.25);
 }
 
 .mobile-nav a.active svg {
