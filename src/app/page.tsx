@@ -38,7 +38,8 @@ import {
   MessageSquare,
   Heart,
   Sparkles,
-  Calculator
+  Calculator,
+  Rocket
 } from 'lucide-react'
 
 // Slide data
@@ -1222,8 +1223,18 @@ THIRD CLUSTER:   4 months     (referrals emerge)
               </div>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="text-sm md:text-base text-gray-400">
+            <motion.div variants={fadeInUp} className="text-sm md:text-base text-gray-400 mb-6">
               SAFE structure · ₹20L minimum check · Detailed terms in data room
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <a
+                href="/ask-20l"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-primary-500/40 bg-primary-500/10 hover:bg-primary-500/20 rounded-xl font-semibold text-primary-400 transition-all"
+              >
+                <Rocket className="w-5 h-5" />
+                Smaller Bridge Round? See the ₹20 Lakh App-Launch Round →
+              </a>
             </motion.div>
           </div>
         </Slide>
@@ -1265,6 +1276,10 @@ THIRD CLUSTER:   4 months     (referrals emerge)
                 <a href="mailto:investors@rez.money" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Mail className="w-4 h-4" />
                   investors@rez.money
+                </a>
+                <a href="/ask-20l" className="flex items-center gap-2 hover:text-primary-400 transition-colors">
+                  <Rocket className="w-4 h-4" />
+                  ₹20L Bridge Round →
                 </a>
                 <a href="https://rez.money" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Globe className="w-4 h-4" />
