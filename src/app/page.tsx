@@ -39,7 +39,8 @@ import {
   Heart,
   Sparkles,
   Calculator,
-  Rocket
+  Rocket,
+  AlertCircle
 } from 'lucide-react'
 
 // Slide data
@@ -64,6 +65,7 @@ const slides = [
   { id: 'founder', title: 'The Founder' },
   { id: 'gtm', title: 'The GTM' },
   { id: 'ask', title: 'The Ask' },
+  { id: 'legal', title: 'Legal & Compliance' },
   { id: 'close', title: 'Close' },
 ]
 
@@ -1239,7 +1241,108 @@ THIRD CLUSTER:   4 months     (referrals emerge)
           </div>
         </Slide>
 
-        {/* Slide 21: Close */}
+        {/* Slide 21: Legal & Compliance */}
+        <Slide id="legal" className="bg-dark-800">
+          <div className="max-w-6xl mx-auto">
+            <SlideTitle icon={Shield} subtitle="A rewards & loyalty wallet, not a payment instrument. No RBI PPI license required today.">
+              Legal & Compliance
+            </SlideTitle>
+
+            {/* 30-second investor answer — callout box */}
+            <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 md:p-8 mb-8 bg-primary-500/10 border border-primary-500/30">
+              <div className="flex items-start gap-3 mb-4">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <div>
+                  <div className="text-sm font-semibold text-primary-400 mb-2 uppercase tracking-wide">30-Second Answer for Investors</div>
+                  <p className="text-base md:text-lg text-gray-200 leading-relaxed italic">
+                    &ldquo;REZ Wallet is a closed-loop rewards and loyalty wallet. It stores only non-transferable promotional rewards and cashback earned within the REZ ecosystem. It does not hold customer funds, allow peer-to-peer transfers, or function as a payment instrument. Therefore, we are not currently operating a regulated payment wallet. As we expand into regulated financial services, we will do so through appropriate licenses or partnerships with RBI-regulated financial institutions.&rdquo;
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* What REZ Wallet does vs doesn't do */}
+            <motion.div variants={staggerContainer} className="grid md:grid-cols-2 gap-4 mb-8">
+              {/* Does */}
+              <motion.div variants={fadeInUp} className="glass rounded-xl p-6 border-l-4 border-green-500 text-left">
+                <h3 className="text-lg font-bold mb-3 text-green-400 flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  What REZ Wallet Does
+                </h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Non-transferable rewards</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Cashback credits (merchant-funded 5%)</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Promotional credits</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Merchant rewards</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Loyalty points (REZ Coins)</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Redeemable only within REZ merchant network</li>
+                </ul>
+              </motion.div>
+
+              {/* Does NOT */}
+              <motion.div variants={fadeInUp} className="glass rounded-xl p-6 border-l-4 border-red-500 text-left">
+                <h3 className="text-lg font-bold mb-3 text-red-400 flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5" />
+                  What REZ Wallet Does NOT Do
+                </h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" /> Store INR deposits</li>
+                  <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" /> Allow wallet top-ups by users</li>
+                  <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" /> P2P transfers between users</li>
+                  <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" /> Bank transfers</li>
+                  <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" /> Cash withdrawal to bank account</li>
+                  <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" /> Conversion to fiat or crypto</li>
+                </ul>
+              </motion.div>
+            </motion.div>
+
+            {/* Phased regulatory roadmap */}
+            <motion.div variants={fadeInUp} className="mb-8">
+              <h3 className="text-xl font-bold mb-4 text-center">Phased Regulatory Roadmap</h3>
+              <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-4">
+                <motion.div variants={fadeInUp} className="glass rounded-xl p-5 text-left">
+                  <div className="text-xs font-semibold text-green-400 mb-2 uppercase tracking-wide">Phase 1 — Now</div>
+                  <h4 className="font-bold mb-2">Loyalty & Rewards</h4>
+                  <p className="text-sm text-gray-400 mb-3">Closed-loop merchant-funded cashback. No regulated activity.</p>
+                  <div className="text-xs text-gray-500">No RBI license required</div>
+                </motion.div>
+                <motion.div variants={fadeInUp} className="glass rounded-xl p-5 text-left">
+                  <div className="text-xs font-semibold text-blue-400 mb-2 uppercase tracking-wide">Phase 2 — Year 2</div>
+                  <h4 className="font-bold mb-2">Partner with Regulated Entities</h4>
+                  <p className="text-sm text-gray-400 mb-3">UPI, stored-value wallet, cards via licensed partners.</p>
+                  <div className="text-xs text-gray-500">Partner-led, not license-led</div>
+                </motion.div>
+                <motion.div variants={fadeInUp} className="glass rounded-xl p-5 text-left">
+                  <div className="text-xs font-semibold text-purple-400 mb-2 uppercase tracking-wide">Phase 3 — Year 3+</div>
+                  <h4 className="font-bold mb-2">Evaluate Own Licenses</h4>
+                  <p className="text-sm text-gray-400 mb-3">PPI, PA, NBFC — only if commercially justified.</p>
+                  <div className="text-xs text-gray-500">Strategic, not rushed</div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+
+            {/* Compliance Stack — internal architecture */}
+            <motion.div variants={fadeInUp} className="glass rounded-2xl p-6">
+              <h3 className="text-base font-bold mb-3 text-center">Built-In Compliance Stack (Even with Partners)</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-xs text-gray-400">
+                <div className="glass rounded p-2">KYC Orchestration</div>
+                <div className="glass rounded p-2">AML Monitoring</div>
+                <div className="glass rounded p-2">Fraud Detection</div>
+                <div className="glass rounded p-2">Transaction Limits</div>
+                <div className="glass rounded p-2">Audit Logs</div>
+                <div className="glass rounded p-2">Encryption at Rest</div>
+                <div className="glass rounded p-2">Data Privacy (DPDP)</div>
+                <div className="glass rounded p-2">Reconciliation</div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="text-center mt-6 text-xs text-gray-500">
+              Detailed regulatory mapping in <a href="/regulatory-strategy" className="text-primary-400 hover:underline">/regulatory-strategy</a> (data room) · Indian fintech counsel review pre-Series Seed
+            </motion.div>
+          </div>
+        </Slide>
+
+        {/* Slide 22: Close */}
         <Slide id="close" className="bg-gradient-to-b from-dark-900 via-dark-800 to-primary-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div variants={staggerContainer}>
