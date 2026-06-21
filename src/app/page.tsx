@@ -722,13 +722,13 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 md:p-10 bg-gradient-to-r from-primary-500/10 to-primary-600/10 border border-primary-500/30">
-              <p className="text-base md:text-lg text-gray-300 mb-4">Example in production:</p>
+              <p className="text-base md:text-lg text-gray-300 mb-4">Example use case (post-launch):</p>
               <blockquote className="text-xl md:text-2xl text-white italic font-semibold mb-4">
-                "Priya hasn't visited in 12 days"
+                &ldquo;Priya hasn&rsquo;t visited in 12 days&rdquo;
               </blockquote>
               <div className="flex items-center gap-4">
                 <ArrowRight className="w-5 h-5 text-primary-500" />
-                <span className="text-base md:text-lg text-primary-400 font-semibold">21% conversion on retention offer</span>
+                <span className="text-base md:text-lg text-primary-400 font-semibold">21% conversion on retention offer (target)</span>
               </div>
             </motion.div>
 
@@ -1025,50 +1025,76 @@ THIRD CLUSTER:   4 months     (referrals emerge)
         {/* Slide 17: Traction */}
         <Slide id="traction" className="bg-dark-900">
           <div className="max-w-6xl mx-auto">
-            <SlideTitle icon={TrendingUp} subtitle="What we have today. Beta in Bangalore, India.">
+            <SlideTitle icon={Rocket} subtitle="Feature-complete. App store launch within 10 days. First revenue in 30.">
               The Traction
             </SlideTitle>
 
             <motion.div variants={fadeInUp} className="text-center mb-6">
-              <span className="px-4 py-1.5 rounded-full bg-green-500/20 border border-green-500/40 text-green-400 text-sm font-semibold">
-                📍 Bangalore, India
+              <span className="px-4 py-1.5 rounded-full bg-primary-500/20 border border-primary-500/40 text-primary-400 text-sm font-semibold">
+                🚀 Launching in 10 days · App Store + Play Store
               </span>
             </motion.div>
 
-            <motion.div variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <motion.div variants={fadeInUp} className="glass rounded-xl p-6 text-center border-2 border-primary-500/50">
-                <div className="text-4xl md:text-5xl font-black gradient-text mb-2">10</div>
-                <div className="text-sm text-gray-400">Merchants (beta)</div>
+            {/* Pre-Launch Checklist — what's actually built */}
+            <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 border-l-4 border-green-500 text-left">
+                <h3 className="text-lg font-bold mb-4 text-green-400 flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  Built & Ready to Ship
+                </h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Customer app (iOS + Android) — feature-complete</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Merchant app (iOS + Android) — feature-complete</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> QR code generation + scan-to-pay flow</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Wallet + REZ Coins ledger</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> 5% merchant-funded cashback engine</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Merchant dashboard + analytics</li>
+                  <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> AI churn prediction model (trained on synthetic data, ready for live feedback loop)</li>
+                </ul>
               </motion.div>
-              <motion.div variants={fadeInUp} className="glass rounded-xl p-6 text-center border-2 border-blue-500/50">
-                <div className="text-4xl md:text-5xl font-black text-blue-400 mb-2">200</div>
-                <div className="text-sm text-gray-400">Users</div>
-              </motion.div>
-              <motion.div variants={fadeInUp} className="glass rounded-xl p-6 text-center border-2 border-green-500/50">
-                <div className="text-4xl md:text-5xl font-black text-green-400 mb-2">28%</div>
-                <div className="text-sm text-gray-400">Repeat Rate</div>
-              </motion.div>
-              <motion.div variants={fadeInUp} className="glass rounded-xl p-6 text-center border-2 border-purple-500/50">
-                <div className="text-4xl md:text-5xl font-black text-purple-400 mb-2">+62</div>
-                <div className="text-sm text-gray-400">Merchant NPS</div>
+
+              <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 border-l-4 border-yellow-500 text-left">
+                <h3 className="text-lg font-bold mb-4 text-yellow-400 flex items-center gap-2">
+                  <Clock className="w-5 h-5" />
+                  In Progress (Next 10 Days)
+                </h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> App Store + Play Store submission (target: Day 10)</li>
+                  <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> First 10 HSR college-area merchants (verbal LOIs)</li>
+                  <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> College ambassador program kickoff</li>
+                  <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> Privacy policy + Terms of Service finalized</li>
+                  <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> Beta tester onboarding (50 users, Day 7)</li>
+                  <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> Public launch event at HSR (Day 10)</li>
+                </ul>
               </motion.div>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 md:p-8 mb-8">
-              <h3 className="text-lg font-bold mb-4">Live in Production</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {['Core platform', 'Reward redemption', 'AI predictions', 'Merchant retention'].map((feat, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                    <span>{feat}</span>
-                  </div>
-                ))}
+            {/* Projected vs. live — honest framing */}
+            <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 md:p-8 mb-8 bg-primary-500/5 border border-primary-500/20">
+              <h3 className="text-lg font-bold mb-3 text-center">12-Month Targets (Post-Launch)</h3>
+              <p className="text-xs text-gray-500 text-center mb-4">These are the targets we&rsquo;re raising against — not live metrics. We&rsquo;ll update this slide with real numbers every quarter.</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <motion.div variants={fadeInUp} className="text-center">
+                  <div className="text-3xl md:text-4xl font-black gradient-text mb-1">2,000</div>
+                  <div className="text-xs text-gray-400">Merchants (Bangalore Y1)</div>
+                </motion.div>
+                <motion.div variants={fadeInUp} className="text-center">
+                  <div className="text-3xl md:text-4xl font-black text-blue-400 mb-1">40%+</div>
+                  <div className="text-xs text-gray-400">Repeat rate target</div>
+                </motion.div>
+                <motion.div variants={fadeInUp} className="text-center">
+                  <div className="text-3xl md:text-4xl font-black text-green-400 mb-1">5 cities</div>
+                  <div className="text-xs text-gray-400">Launched in 12 mo</div>
+                </motion.div>
+                <motion.div variants={fadeInUp} className="text-center">
+                  <div className="text-3xl md:text-4xl font-black text-purple-400 mb-1">₹11 Cr</div>
+                  <div className="text-xs text-gray-400">Y1 ARR target</div>
+                </motion.div>
               </div>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="text-center text-base md:text-lg text-gray-400">
-              We've proven <span className="text-primary-400 font-semibold">retention mechanics work</span> at small scale.
-              This raise funds cluster expansion to validate the <span className="text-primary-400 font-semibold">density model</span>.
+              The product is built. The bridge round funds the <span className="text-primary-400 font-semibold">first 90 days of go-to-market</span> — events, salaries, and merchant activation in HSR.
             </motion.div>
           </div>
         </Slide>

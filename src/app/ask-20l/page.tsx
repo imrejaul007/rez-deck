@@ -190,6 +190,74 @@ export default function Ask20LPage() {
         </motion.div>
       </section>
 
+      {/* PRODUCT READY — PRE-LAUNCH */}
+      <section className="px-4 md:px-8 lg:px-16 py-20 bg-dark-800">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={staggerContainer}
+          className="max-w-5xl mx-auto"
+        >
+          <SectionTitle icon={Rocket} subtitle="The product is feature-complete. The bridge round funds go-to-market, not development.">
+            Product Ready · Pre-Launch
+          </SectionTitle>
+
+          <motion.div variants={fadeInUp} className="text-center mb-8">
+            <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary-500/20 border border-primary-500/40 text-primary-400 text-base font-semibold">
+              <Rocket className="w-4 h-4" />
+              App Store + Play Store launch in 10 days
+            </span>
+          </motion.div>
+
+          {/* Built & Ready vs. In Progress */}
+          <motion.div variants={staggerContainer} className="grid md:grid-cols-2 gap-4 mb-8">
+            <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 border-l-4 border-green-500 text-left">
+              <h3 className="text-lg font-bold mb-4 text-green-400 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5" />
+                Built &amp; Ready to Ship
+              </h3>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Customer app (iOS + Android) — feature-complete</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Merchant app (iOS + Android) — feature-complete</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> QR code generation + scan-to-pay flow</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Wallet + REZ Coins ledger</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> 5% merchant-funded cashback engine</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> Merchant dashboard + analytics</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" /> AI churn prediction model (live feedback loop ready)</li>
+              </ul>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="glass rounded-2xl p-6 border-l-4 border-yellow-500 text-left">
+              <h3 className="text-lg font-bold mb-4 text-yellow-400 flex items-center gap-2">
+                <Clock className="w-5 h-5" />
+                In Progress (Next 10 Days)
+              </h3>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> App Store + Play Store submission (target: Day 10)</li>
+                <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> First 10 HSR college-area merchants (verbal LOIs)</li>
+                <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> College ambassador program kickoff</li>
+                <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> Privacy policy + Terms of Service finalized</li>
+                <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> 50 beta testers onboarded (Day 7)</li>
+                <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> Public launch event at HSR (Day 10)</li>
+                <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" /> First revenue transaction (Day 30 target)</li>
+              </ul>
+            </motion.div>
+          </motion.div>
+
+          {/* Why no live metrics — honest framing */}
+          <motion.div
+            variants={fadeInUp}
+            className="glass rounded-2xl p-6 md:p-8 bg-primary-500/5 border border-primary-500/20"
+          >
+            <h3 className="text-lg font-bold mb-3 text-center">What This Means for Investors</h3>
+            <p className="text-sm text-gray-300 leading-relaxed text-center max-w-2xl mx-auto">
+              The product is built. The bridge round funds the <span className="text-primary-400 font-semibold">first 90 days of go-to-market</span> — events, ground team salaries, and merchant activation in HSR college belt. Live metrics (users, repeat rate, GMV) will be published in the monthly investor dashboard starting Day 30.
+            </p>
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* USE OF FUNDS - TRANCHE TOGGLE */}
       <section id="tranche-1" className="px-4 md:px-8 lg:px-16 py-20">
         <motion.div
